@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Config.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nhanafi <nhanafi@student.42.fr>            +#+  +:+       +#+        */
+/*   By: bmaaqoul <bmaaqoul@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 18:48:20 by nhanafi           #+#    #+#             */
-/*   Updated: 2023/05/21 02:16:45 by nhanafi          ###   ########.fr       */
+/*   Updated: 2023/05/23 18:35:58 by bmaaqoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,8 +98,6 @@ void	Config::setserver_name(std::string &str)
 
 void	Config::setclient_size(std::string &str)
 {
-	if (client_max_body_size)
-		throw "multiple client size " + str;
 	trim(str, "\n\t; ");
 	if (str.size() > 17 ||str.find_first_not_of("0123456789kmKMgG") != str.npos ||\
 		str.find_first_of("kmgKMG") != str.find_last_of("kmgKMG")||

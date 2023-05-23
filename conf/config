@@ -5,11 +5,11 @@ server
   listen 80;
 
   # Set the server name and document root
-  root /Users/nhanafi/goinfre/test/;
+  root /Users/bmaaqoul/goinfre/test/;
   server_name example.tv;
   # Set a default file to serve for directory requests
   # Define a location block for the /downloads route
-  # client_max_body_size 4;
+  client_max_body_size 4;
   # location /downloads {
   #   # Set the file system path to the directory to serve
   #   methods GET;
@@ -25,7 +25,7 @@ server
   location /upload {
     # Set the file system path to the directory to serve
     methods POST GET DELETE;
-    root /Users/nhanafi/goinfre/test/download;
+    root /Users/bmaaqoul/goinfre/test/download;
     # Enable directory listing
     index index.html;
     autoindex on;
@@ -36,7 +36,7 @@ server
   location /cookies {
     # Set the file system path to the directory to serve
     methods POST GET DELETE;
-    root /Users/nhanafi/goinfre/test/cookies;
+    root /Users/bmaaqoul/goinfre/test/cookies;
     # Enable directory listing
     cgi .py /usr/bin/python3;
     autoindex on;
@@ -46,7 +46,7 @@ server
   location /cgi {
     # Set the file system path to the directory to serve
     methods GET POST;
-    root /Users/nhanafi/goinfre/test/cgi;
+    root /Users/bmaaqoul/goinfre/test/cgi;
     cgi .py /usr/bin/python3;
     autoindex on;
     # index file1.html;
@@ -57,7 +57,7 @@ server
   location /rbCgi {
     # Set the file system path to the directory to serve
     methods GET POST;
-    root /Users/nhanafi/goinfre/test/cgi;
+    root /Users/bmaaqoul/goinfre/test/cgi;
     cgi .rb /usr/bin/ruby;
     autoindex on;
     index file1.html;
@@ -81,7 +81,7 @@ server
 
   # Set the server name and document root
   server_name example.com;
-  root /Users/nhanafi/goinfre/test2/;
+  root /Users/bmaaqoul/goinfre/test2/;
 
   # Set a default file to serve for directory requests
   # Define a location block for the /downloads route
@@ -101,7 +101,7 @@ server
   location /upload {
     # Set the file system path to the directory to serve
     methods POST GET DELETE;
-    root /Users/nhanafi/goinfre/test2/download;
+    root /Users/bmaaqoul/goinfre/test2/download;
     # Enable directory listing
     index index.html;
     autoindex on;
@@ -112,7 +112,7 @@ server
   location /cookies {
     # Set the file system path to the directory to serve
     methods POST GET DELETE;
-    root /Users/nhanafi/goinfre/test2/cookies;
+    root /Users/bmaaqoul/goinfre/test2/cookies;
     # Enable directory listing
     cgi .py /usr/bin/python3;
     autoindex on;
@@ -122,7 +122,7 @@ server
   location /cgi {
     # Set the file system path to the directory to serve
     methods GET POST;
-    root /Users/nhanafi/goinfre/test2/cgi;
+    root /Users/bmaaqoul/goinfre/test2/cgi;
     cgi .py /usr/bin/python3;
     autoindex on;
     # index file1.html;
@@ -133,7 +133,7 @@ server
   location /rbCgi {
     # Set the file system path to the directory to serve
     methods GET POST;
-    root /Users/nhanafi/goinfre/test2/cgi;
+    root /Users/bmaaqoul/goinfre/test2/cgi;
     cgi .rb /usr/bin/ruby;
     autoindex on;
     index file1.html;
